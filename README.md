@@ -1,9 +1,9 @@
-### 1 – Transition-based Dependency Parser.
+### 1 – Transition-based Dependency Parser. (EarlyParser)
 
 
 This project implements a machine-learning transition-based dependency parser based on the Arc-Eager algorithm, which incrementally builds dependency trees by predicting parsing actions and dependency labels at each step. The system is implemented in Python using TensorFlow/Keras and relies on features extracted from the current parsing state, including words and part-of-speech tags. The pipeline supports training, evaluation and inference on CoNLL-U data, includes validation of transitions during decoding, and filters non-projective trees before training. Several hyperparameter configurations were compared, showing that a moderate model size achieves the best performance, reaching around 0.84 accuracy for both transition and dependency prediction.
 
-### 2 – Neural Part-of-Speech Tagger.
+### 2 – Neural Part-of-Speech Tagger. (POS-tagger)
 
 
 This project develops a neural sequence labelling system for part-of-speech tagging using a bidirectional LSTM architecture implemented in TensorFlow/Keras. The system includes a complete data pipeline for downloading, parsing and vectorizing CoNLL-U datasets, together with a token abstraction for handling linguistic information. The model uses customized text vectorization and dropout to improve generalization and is trained and evaluated on both English and Galician datasets. The results show very high performance on English data (around 99% accuracy) and solid performance on Galician data (around 80%), demonstrating the effectiveness of the proposed tagging approach across different languages.
